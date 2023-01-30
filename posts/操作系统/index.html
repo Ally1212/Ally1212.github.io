@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>操作系统 - 我的解放日志</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="操作系统" />
+<meta property="og:description" content="操作系统 一、引论 1.1 OS的概念 铺设在硬件上多层软件的集合 1.2 目标和作用 目标：方便性，有效性，可扩充性，开放性 作用： 用户与硬件系统的接口 系统资源的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ally1212.github.io/posts/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-29T22:34:26+08:00" />
+<meta property="article:modified_time" content="2023-01-29T22:34:26+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="操作系统"/>
+<meta name="twitter:description" content="操作系统 一、引论 1.1 OS的概念 铺设在硬件上多层软件的集合 1.2 目标和作用 目标：方便性，有效性，可扩充性，开放性 作用： 用户与硬件系统的接口 系统资源的"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ally1212.github.io/posts/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" /><link rel="prev" href="https://ally1212.github.io/posts/%E7%AC%AC%E4%B8%80%E9%81%8D%E5%8D%9A%E5%AE%A2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "操作系统",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ally1212.github.io\/posts\/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F\/"
+        },"genre": "posts","keywords": "操作系统","wordcount":  3333 ,
+        "url": "https:\/\/ally1212.github.io\/posts\/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F\/","datePublished": "2023-01-29T22:34:26+08:00","dateModified": "2023-01-29T22:34:26+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "ziheng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的解放日志"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/friend/"> 友链 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的解放日志"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/friend/" title="">友链</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">操作系统</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ziheng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>计算机基础</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-29">2023-01-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3333 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#一引论">一、引论</a>
+      <ul>
+        <li><a href="#11-os的概念">1.1 OS的概念</a></li>
+        <li><a href="#12-目标和作用">1.2 目标和作用</a></li>
+        <li><a href="#13-发展过程">1.3 发展过程</a></li>
+        <li><a href="#14-基本特征">1.4 基本特征</a></li>
+        <li><a href="#15-功能">1.5 功能</a></li>
+      </ul>
+    </li>
+    <li><a href="#二进程管理">二、进程管理</a>
+      <ul>
+        <li><a href="#21-进程">2.1 进程</a></li>
+        <li><a href="#22-进程的特征">2.2 进程的特征</a></li>
+        <li><a href="#23-进程的状态">2.3 进程的状态</a></li>
+        <li><a href="#24-pcb">2.4 PCB</a></li>
+        <li><a href="#25-进程通信">2.5 进程通信</a></li>
+        <li><a href="#26-原语">2.6 原语</a></li>
+        <li><a href="#27-消息队列">2.7 消息队列</a></li>
+        <li><a href="#28-线程">2.8 线程</a></li>
+      </ul>
+    </li>
+    <li><a href="#三处理机调度">三、处理机调度</a>
+      <ul>
+        <li><a href="#31-为什么引入">3.1 为什么引入</a></li>
+        <li><a href="#32-处理机调度层次">3.2 处理机调度层次</a></li>
+        <li><a href="#33-作业和作业调度">3.3 作业和作业调度</a></li>
+        <li><a href="#34-进程调度">3.4 进程调度</a></li>
+        <li><a href="#35-调度算法">3.5 调度算法</a></li>
+        <li><a href="#36-实时调度">3.6 实时调度</a></li>
+        <li><a href="#37-实时调度算法">3.7 实时调度算法</a></li>
+      </ul>
+    </li>
+    <li><a href="#四死锁">四、死锁</a>
+      <ul>
+        <li><a href="#41-死锁概念">4.1 死锁概念</a></li>
+        <li><a href="#42-死锁的必要条件">4.2 死锁的必要条件</a></li>
+        <li><a href="#43-死锁预防">4.3 死锁预防</a></li>
+        <li><a href="#44-死锁避免">4.4 死锁避免</a></li>
+        <li><a href="#45-死锁检测">4.5 死锁检测</a></li>
+        <li><a href="#46-死锁解除">4.6 死锁解除</a></li>
+      </ul>
+    </li>
+    <li><a href="#五进程同步">五、进程同步</a>
+      <ul>
+        <li><a href="#51-概念">5.1 概念</a></li>
+        <li><a href="#52-临界区问题">5.2 临界区问题</a></li>
+        <li><a href="#53-信号量机制">5.3 信号量机制</a></li>
+      </ul>
+    </li>
+    <li><a href="#六存储器">六、存储器</a>
+      <ul>
+        <li><a href="#61-层次结构">6.1 层次结构</a></li>
+        <li><a href="#62-程序的装入和链接">6.2 程序的装入和链接</a></li>
+        <li><a href="#63-对换与覆盖">6.3 对换与覆盖</a></li>
+        <li><a href="#64-连续分配方式">6.4 连续分配方式</a></li>
+        <li><a href="#65-分页存储管理方式">6.5 分页存储管理方式</a></li>
+        <li><a href="#67-段页式">6.7 段页式</a></li>
+        <li><a href="#68-分页和分段的比较">6.8 分页和分段的比较</a></li>
+      </ul>
+    </li>
+    <li><a href="#七虚拟存储器">七、虚拟存储器</a>
+      <ul>
+        <li><a href="#71-概念">7.1 概念</a></li>
+        <li><a href="#72-虚拟技术的实现">7.2 虚拟技术的实现</a></li>
+        <li><a href="#73-页面置换算法">7.3 页面置换算法</a></li>
+        <li><a href="#74-抖动与工作集">7.4 抖动与工作集</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gitee.com/Flyme001/pic-bed/raw/master/img/image-20230130103508018.png"
+        data-srcset="https://gitee.com/Flyme001/pic-bed/raw/master/img/image-20230130103508018.png, https://gitee.com/Flyme001/pic-bed/raw/master/img/image-20230130103508018.png 1.5x, https://gitee.com/Flyme001/pic-bed/raw/master/img/image-20230130103508018.png 2x"
+        data-sizes="auto"
+        alt="https://gitee.com/Flyme001/pic-bed/raw/master/img/image-20230130103508018.png"
+        title="image-20230130103508018" /></p>
+<h1 id="操作系统">操作系统</h1>
+<h2 id="一引论">一、引论</h2>
+<h3 id="11-os的概念">1.1 OS的概念</h3>
+<p>铺设在硬件上多层软件的集合</p>
+<h3 id="12-目标和作用">1.2 目标和作用</h3>
+<p>目标：方便性，有效性，可扩充性，开放性</p>
+<p>作用：</p>
+<ol>
+<li>用户与硬件系统的接口</li>
+<li>系统资源的管理者</li>
+<li>实现了对计算机资源的抽象</li>
+</ol>
+<h3 id="13-发展过程">1.3 发展过程</h3>
+<ol>
+<li>未配置OS 的系统&ndash;&gt;人机矛盾（cpu与io设备不匹配）&ndash;&gt;解决：脱机系统（减少cpu空闲，提高了IO速度）</li>
+<li>单道批处理系统&ndash;&gt;缺点&ndash;&gt;系统资源得不到充分利用</li>
+<li>多道批处理系统&ndash;&gt;最大缺点&ndash;&gt;失去交互性，优点：资源利用率高，系统吞吐量大  硬件支持：通道和中断</li>
+<li>分时系统（一个主机连接多个终端的系统）&ndash;&gt;人机交互（独占全机控制），共享主机，有及时性，交互性，多路性，独立性&mdash;&mdash;-&gt;经常使用时间片轮转技术&ndash;&gt;因为一台电脑，好几个人用</li>
+<li>实时系统&ndash;&gt;可以及时响应外部事件的请求：可靠性</li>
+<li>微机操作状态&ndash;&gt;配置在微机上的OS&ndash;&gt;x用户x任务</li>
+<li>嵌入式操作系统&ndash;&gt;为完成特定功能而设计&ndash;&gt;内核小，精简</li>
+<li>网络操作系统&ndash;&gt;在网络下对资源进行管理</li>
+<li>分布式操作系统&ndash;&gt;基于软件实现的多处理机系统</li>
+</ol>
+<h3 id="14-基本特征">1.4 基本特征</h3>
+<ol>
+<li>并发：多个事件同一时间间隔发生</li>
+<li>共享：OS中的资源可供多个并发进程使用</li>
+<li>虚拟：把物理实体变为逻辑上对应物的功能（时分复用，空分复用）</li>
+<li>异步：进程以不可预知的速度向前推进</li>
+</ol>
+<h3 id="15-功能">1.5 功能</h3>
+<ol>
+<li>CPU管理</li>
+<li>存储器管理</li>
+<li>外部设备管理</li>
+<li>文件管理</li>
+</ol>
+<hr>
+<p>以上四种属于资源管理</p>
+<ol>
+<li>用户接口管理</li>
+</ol>
+<h2 id="二进程管理">二、进程管理</h2>
+<h3 id="21-进程">2.1 进程</h3>
+<p>进程是程序的执行过程，资源分配和调度的独立单位</p>
+<h3 id="22-进程的特征">2.2 进程的特征</h3>
+<ol>
+<li>动态性</li>
+<li>并发性</li>
+<li>独立性</li>
+<li>异步性</li>
+</ol>
+<h3 id="23-进程的状态">2.3 进程的状态</h3>
+<h3 id="24-pcb">2.4 PCB</h3>
+<p>为什么引入：为了便于系统描述和管理进程，作为独立运行基本单位的标志</p>
+<p>进程的状态和优先级信息存放在PCB</p>
+<h3 id="25-进程通信">2.5 进程通信</h3>
+<ul>
+<li>基于共享数据结构</li>
+<li>基于共享存储区</li>
+</ul>
+<p>管道通信：连接一个读进程和一个写进程的文件</p>
+<p>消息传递机制：将格式化信息封装在消息中，利用原语实现通信</p>
+<p>客户&ndash;服务器系统</p>
+<ul>
+<li>套接字：通信标志类型的数据结构</li>
+<li>远程方法调用（RPC）：通信协议</li>
+</ul>
+<h3 id="26-原语">2.6 原语</h3>
+<p>原语是由若干指令组成，用来完成特定功能的一个过程。（特点：不可分割性）</p>
+<p>用户为阻止进程继续执行，应利用（阻塞）原语，若进程正在执行，应转变为（阻塞）状态；以后，若用户要恢复其运行，应利用（唤醒）原语，此时进程应转变为（就绪）状态。</p>
+<p>在操作系统中，P、V操作是一种进程低级通信原语</p>
+<h3 id="27-消息队列">2.7 消息队列</h3>
+<p>运行于同一台机器上进程间通信中，和管道类似</p>
+<p>克服了信号承载信息量少，管道只能承载无格式信息流，缓冲区受限等缺点</p>
+<h3 id="28-线程">2.8 线程</h3>
+<p>线程是进程中的⼀个执行单元，是CPU 调度基本单位</p>
+<p>为什么引入：为了提高程序并发执行的程度</p>
+<h2 id="三处理机调度">三、处理机调度</h2>
+<h3 id="31-为什么引入">3.1 为什么引入</h3>
+<p>内存中进程进多，处理机少&ndash;&gt;系统要按算法动态分配处理机</p>
+<h3 id="32-处理机调度层次">3.2 处理机调度层次</h3>
+<ol>
+<li>高级调度：调度对象是外存中后备队列的作业</li>
+<li>低级调度：调度对象是进程</li>
+<li>中级调度：存储器管理中的对换功能</li>
+</ol>
+<h3 id="33-作业和作业调度">3.3 作业和作业调度</h3>
+<p>作业：用户交给系统的独立工作</p>
+<p>作业控制块：JCB（作业在系统中的标志）</p>
+<h3 id="34-进程调度">3.4 进程调度</h3>
+<p>任务：</p>
+<ol>
+<li>保存CPU现场</li>
+<li>按算法选取进程</li>
+<li>CPU 分配给进程</li>
+</ol>
+<p>方式：</p>
+<ol>
+<li>非抢占式调度：一处理机分配给一个进程，会一直运行下去</li>
+<li>抢占式调度</li>
+</ol>
+<h3 id="35-调度算法">3.5 调度算法</h3>
+<ul>
+<li>FCFS（先来先服务调度算法）</li>
+<li>SJF(短作业调度算法)</li>
+<li>优先级调度算法</li>
+<li>RR（轮转调度算法）</li>
+<li>多级队列调度算法</li>
+</ul>
+<h3 id="36-实时调度">3.6 实时调度</h3>
+<p>要求有截止时间</p>
+<h3 id="37-实时调度算法">3.7 实时调度算法</h3>
+<p>最早截止时间优先算法</p>
+<h2 id="四死锁">四、死锁</h2>
+<h3 id="41-死锁概念">4.1 死锁概念</h3>
+<p>各进程互相等待对方手里的资源，导致各进程都阻塞，无法向前推进的现象</p>
+<p>产生死锁的根本原因：系统资源不足</p>
+<h3 id="42-死锁的必要条件">4.2 死锁的必要条件</h3>
+<ul>
+<li>互斥：每个资源要么已经分配给了一个进程，要么就是可用的。</li>
+<li>占有和等待：已经得到了某个资源的进程可以再请求新的资源。</li>
+<li>不可抢占：已经分配给一个进程的资源不能强制性地被抢占，它只能被占有它的进程显式地释放。</li>
+<li>环路等待：有两个或者两个以上的进程组成一条环路，该环路中的每个进程都在等待下一个进程所占有的资源。</li>
+</ul>
+<h3 id="43-死锁预防">4.3 死锁预防</h3>
+<p>在程序运行之前预防发生死锁。</p>
+<ol>
+<li>破坏互斥条件，例如假脱机打印机技术允许若干个进程同时输出，唯一真正请求物理打印机的进程是打印机守护进程。</li>
+<li>破坏占有和等待条件，一种实现方式是规定所有进程在开始执行前请求所需要的全部资源。</li>
+<li>破坏不可抢条件</li>
+<li>破坏环路等待，给资源统一编号，进程只能按编号顺序来请求资源。</li>
+</ol>
+<h3 id="44-死锁避免">4.4 死锁避免</h3>
+<p>安全状态：系统按某种进程推进顺序，为每个进程分配资源，直到满足每个进程对资源的最大需求，从而使每个进程都可顺利完成一种系统状态</p>
+<hr>
+<p>银行家算法</p>
+<h3 id="45-死锁检测">4.5 死锁检测</h3>
+<p>资源分配图中是否找到一个有向环型图</p>
+<h3 id="46-死锁解除">4.6 死锁解除</h3>
+<ul>
+<li>利用抢占恢复</li>
+<li>利用回滚恢复</li>
+<li>通过杀死进程恢复</li>
+</ul>
+<h2 id="五进程同步">五、进程同步</h2>
+<h3 id="51-概念">5.1 概念</h3>
+<p>进程同步指的是协调多个并发执行进程的工作先后次序</p>
+<h3 id="52-临界区问题">5.2 临界区问题</h3>
+<p>临界资源：一个时间段内只允许一个进程使用的资源</p>
+<p>l临界区：进程中访问临界资源的那段代码</p>
+<p>访问临界资源需要遵循的原则：</p>
+<p>(1) 空闲让进</p>
+<p>临界区空闲时，可以允许一个请求进入临界区的进程立即进入临界区</p>
+<p>(2) 忙则等待</p>
+<p>当已有进程进入临界区时，其他试图进入临界区的进程必须等待</p>
+<p>(3) 有限等待</p>
+<p>对请求访问的进程，应保证能在有限时间内进入临界区 (保证不会饥饿)</p>
+<p>(4) 让权等待</p>
+<p>当进程不能进入临界区，应当立即释放处理机，防止进程忙等待 (不应该让他占用处理机 一直执行循环无法前进，应当得知无法进入临界区时不执行循环，直接切换进程)</p>
+<h3 id="53-信号量机制">5.3 信号量机制</h3>
+<p>互斥使用缓冲区的信号量只能取值0、1，一般初始值为1。</p>
+<p>设与某资源相关联的信号量初值为3，当前值为1，若M表示该资源的可用个数，N表示等待资源的进程数，则M、N分别是（  1,3 ）。</p>
+<h2 id="六存储器">六、存储器</h2>
+<h3 id="61-层次结构">6.1 层次结构</h3>
+<p>对于通用计算机而言，存储层次至少应具有三级：最高层为CPU<a href="https://so.csdn.net/so/search?q=%e5%af%84%e5%ad%98%e5%99%a8&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer ">寄存器</a>，中间为主存，最底层是辅存。</p>
+<h3 id="62-程序的装入和链接">6.2 程序的装入和链接</h3>
+<p>创建进程的第一件事，就是要将程序和数据装入内存。将程序变为可执行程序要经过以下几步：
+（1）编译
+由编译程序将用户源代码编译成若干个目标模块。
+（2）链接
+由链接程序将编译后形成的目标模块以及它们所需要的库函数,链接在一起，形成一个装入模块。
+（3）装入
+由装入程序将装入模块装入内存。</p>
+<h3 id="63-对换与覆盖">6.3 对换与覆盖</h3>
+<p>对换：将一定数量的程序或数据换出内存</p>
+<ul>
+<li>整体对换：处理机中级调度，对换对象是进程</li>
+<li>页面（分段）对换</li>
+</ul>
+<h3 id="64-连续分配方式">6.4 连续分配方式</h3>
+<ul>
+<li>单一连续分配</li>
+<li>固定分区分配</li>
+<li>动态分区分配（算法）</li>
+<li>动态重定位分区分配</li>
+</ul>
+<p>关于动态分区分配算法：</p>
+<ul>
+<li>首次适应算法：地址递增：找到第一个符合条件的</li>
+<li>最佳适应算法：容量递增：找到第一个符合条件的</li>
+<li>最坏适应算法：作业装入内存，先挑选一个最大的空闲区</li>
+<li>快速适应算法：根据进程常用空间大小划分</li>
+</ul>
+<h3 id="65-分页存储管理方式">6.5 分页存储管理方式</h3>
+<p>把进程的地址空间分为若干页，内存空间分为若干块，对应起来</p>
+<p>地址变换机构：将逻辑地址变为物理地址</p>
+<p>###6.6 分段存储管理方式</p>
+<p>作业地址空间被分为很多段，每一个段都有自己的逻辑信息</p>
+<p>面向程序员</p>
+<h3 id="67-段页式">6.7 段页式</h3>
+<p>程序的地址空间划分成多个拥有独立地址空间的段，每个段上的地址空间划分成大小相同的页。这样既拥有分段系统的共享和保护，又拥有分页系统的虚拟内存功能。</p>
+<h3 id="68-分页和分段的比较">6.8 分页和分段的比较</h3>
+<ul>
+<li>对程序员的透明性：分页透明，但是分段需要程序员显式划分每个段。</li>
+<li>地址空间的维度：分页是一维地址空间，分段是二维的。</li>
+<li>大小是否可以改变：页的大小不可变，段的大小可以动态改变。</li>
+<li>出现的原因：分页主要用于实现虚拟内存，从而获得更大的地址空间；分段主要是为了使程序和数据可以被划分为逻辑上独立的地址空间并且有助于共享和保护。</li>
+</ul>
+<h2 id="七虚拟存储器">七、虚拟存储器</h2>
+<h3 id="71-概念">7.1 概念</h3>
+<p>虚拟存储器能将较大的逻辑地址映射到较小的物理地址上</p>
+<h3 id="72-虚拟技术的实现">7.2 虚拟技术的实现</h3>
+<p>请求分页存储管理方式:</p>
+<p>页的大小相同，管理方便&ndash;&gt;常用</p>
+<p>页表组成：页号，物理块号，状态位，访问字段，修改位，外存地址</p>
+<p>请求分段存储管理方式:以分段为单位进行换入换出</p>
+<h3 id="73-页面置换算法">7.3 页面置换算法</h3>
+<p>最佳页面置换算法（理论算法）：被淘汰的页面是最长时间不会被访问的页面</p>
+<p>先进先出页面置换算法（FIFO）：淘汰上一个进去内存的页面</p>
+<p>最近最久未使用算法（LRU）：选择最近最久的页面淘汰</p>
+<p>Clock页面置换算法：LRU算法的近似</p>
+<h3 id="74-抖动与工作集">7.4 抖动与工作集</h3>
+<p>抖动：进程大部分时间用来换入换出，而几乎没有时间进行工作</p>
+<p>工作集：一段时间间隔内要访问的页面集合</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-01-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E7%AC%AC%E4%B8%80%E9%81%8D%E5%8D%9A%E5%AE%A2/" class="prev" rel="prev" title="第一遍博客"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>第一遍博客</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">ziheng</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"data":{"id-1":"夜航西飞","id-2":"夜航西飞"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>操作系统 - 标签 - 我的解放日志</title>
+        <link>https://ally1212.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+        <description>操作系统 - 标签 - 我的解放日志</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>操作系统</title>
+    <link>https://ally1212.github.io/posts/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <pubDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+    <description><![CDATA[操作系统 一、引论 1.1 OS的概念 铺设在硬件上多层软件的集合 1.2 目标和作用 目标：方便性，有效性，可扩充性，开放性 作用： 用户与硬件系统的接口 系统资源的]]></description>
+</item>
+</channel>
+</rss>
