@@ -3,7 +3,39 @@
         <title>所有文章 - 我的解放日志</title>
         <link>https://ally1212.github.io/posts/</link>
         <description>所有文章 | 我的解放日志</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SSM快速整合</title>
+    <link>https://ally1212.github.io/posts/ssm%E5%BF%AB%E9%80%9F%E6%95%B4%E5%90%88/</link>
+    <pubDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/ssm%E5%BF%AB%E9%80%9F%E6%95%B4%E5%90%88/</guid>
+    <description><![CDATA[各司其职 Spring+SpringMVC+MyBatis Spring MVC负责实现MVC设计模式 MyBatis负责数据持久层 Spring负责管理Spring MVC和MyBatis相关对象的创建和依]]></description>
+</item>
+<item>
+    <title>Typora使用文档</title>
+    <link>https://ally1212.github.io/posts/typora%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</link>
+    <pubDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/typora%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</guid>
+    <description><![CDATA[第零步 注意事项 中文标点符号不被Markdown所认可, 而且无法被转义. 所以应该使用英文标点. 并且在使用后加一个空格使其更美观. 第一步 基础语法]]></description>
+</item>
+<item>
+    <title>Servlet优化</title>
+    <link>https://ally1212.github.io/posts/servlet%E4%BC%98%E5%8C%96/</link>
+    <pubDate>Thu, 02 Feb 2023 09:35:16 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/servlet%E4%BC%98%E5%8C%96/</guid>
+    <description><![CDATA[1.1 归纳实体Servlet servlet比较多&ndash;&gt;FruitServlet处理 把各个servlet中的do get/do post方法剪贴]]></description>
+</item>
+<item>
+    <title>关于博客</title>
+    <link>https://ally1212.github.io/posts/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</link>
+    <pubDate>Thu, 02 Feb 2023 09:27:00 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</guid>
+    <description><![CDATA[起因 过年这后几天，看到到一篇博客，里面记录了这个博客的历史，最后一条记录是迁移到了hugo，顺便介绍了hugo的一些优点。被这些优点深深吸引]]></description>
+</item>
+<item>
     <title>操作系统</title>
     <link>https://ally1212.github.io/posts/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
     <pubDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</pubDate>
@@ -12,12 +44,28 @@
     <description><![CDATA[操作系统 一、引论 1.1 OS的概念 铺设在硬件上多层软件的集合 1.2 目标和作用 目标：方便性，有效性，可扩充性，开放性 作用： 用户与硬件系统的接口 系统资源的]]></description>
 </item>
 <item>
-    <title>第一遍博客</title>
-    <link>https://ally1212.github.io/posts/%E7%AC%AC%E4%B8%80%E9%81%8D%E5%8D%9A%E5%AE%A2/</link>
-    <pubDate>Sun, 29 Jan 2023 19:51:05 &#43;0800</pubDate>
+    <title>计算机网络</title>
+    <link>https://ally1212.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</pubDate>
     <author>ziheng</author>
-    <guid>https://ally1212.github.io/posts/%E7%AC%AC%E4%B8%80%E9%81%8D%E5%8D%9A%E5%AE%A2/</guid>
-    <description><![CDATA[第一篇博客 构建中 加油！]]></description>
+    <guid>https://ally1212.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+    <description><![CDATA[计算机网络 一、概述 1.1 基本术语 结点：网络中的结点可以是计算机、集线器、交换机或者路由器 链路：从一个结点到另一个结点的物理线路，中间没有其他交点]]></description>
+</item>
+<item>
+    <title>反思日记</title>
+    <link>https://ally1212.github.io/posts/%E5%8F%8D%E6%80%9D%E6%97%A5%E8%AE%B02022.11.25/</link>
+    <pubDate>Fri, 25 Nov 2022 09:27:00 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E5%8F%8D%E6%80%9D%E6%97%A5%E8%AE%B02022.11.25/</guid>
+    <description><![CDATA[一、回顾 最近突然觉得时间紧急，自己基础很不牢固 最近慢慢调整过来了，重新总结了web的重要知识 明白了基础（408）的重要性，总结也很重要 总之我]]></description>
+</item>
+<item>
+    <title>反思日记</title>
+    <link>https://ally1212.github.io/posts/%E5%8F%8D%E6%80%9D%E6%97%A5%E8%AE%B02022.11.4/</link>
+    <pubDate>Fri, 04 Nov 2022 09:27:00 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E5%8F%8D%E6%80%9D%E6%97%A5%E8%AE%B02022.11.4/</guid>
+    <description><![CDATA[一、回顾 当前一周在学spring-boot，与其说是在学，不如说是在补之前的懒惰。 整理的过程中，脑子也开始思考，慢慢清楚了知识的架构。 我上周]]></description>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>网络 - 标签 - 我的解放日志</title>
+        <link>https://ally1212.github.io/tags/%E7%BD%91%E7%BB%9C/</link>
+        <description>网络 - 标签 - 我的解放日志</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/%E7%BD%91%E7%BB%9C/" rel="self" type="application/rss+xml" /><item>
+    <title>计算机网络</title>
+    <link>https://ally1212.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+    <description><![CDATA[计算机网络 一、概述 1.1 基本术语 结点：网络中的结点可以是计算机、集线器、交换机或者路由器 链路：从一个结点到另一个结点的物理线路，中间没有其他交点]]></description>
+</item>
+</channel>
+</rss>

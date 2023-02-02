@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>web - 标签 - 我的解放日志</title>
+        <link>https://ally1212.github.io/tags/web/</link>
+        <description>web - 标签 - 我的解放日志</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Feb 2023 09:35:16 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>Servlet优化</title>
+    <link>https://ally1212.github.io/posts/servlet%E4%BC%98%E5%8C%96/</link>
+    <pubDate>Thu, 02 Feb 2023 09:35:16 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/servlet%E4%BC%98%E5%8C%96/</guid>
+    <description><![CDATA[1.1 归纳实体Servlet servlet比较多&ndash;&gt;FruitServlet处理 把各个servlet中的do get/do post方法剪贴]]></description>
+</item>
+</channel>
+</rss>

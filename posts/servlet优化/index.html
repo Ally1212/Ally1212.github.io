@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Servlet优化 - 我的解放日志</title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Servlet优化" />
+<meta property="og:description" content="1.1 归纳实体Servlet servlet比较多&ndash;&gt;FruitServlet处理 把各个servlet中的do get/do post方法剪贴" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ally1212.github.io/posts/servlet%E4%BC%98%E5%8C%96/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-02T09:35:16+08:00" />
+<meta property="article:modified_time" content="2023-02-02T09:35:16+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Servlet优化"/>
+<meta name="twitter:description" content="1.1 归纳实体Servlet servlet比较多&ndash;&gt;FruitServlet处理 把各个servlet中的do get/do post方法剪贴"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://ally1212.github.io/posts/servlet%E4%BC%98%E5%8C%96/" /><link rel="prev" href="https://ally1212.github.io/posts/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" /><link rel="next" href="https://ally1212.github.io/posts/typora%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Servlet优化",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ally1212.github.io\/posts\/servlet%E4%BC%98%E5%8C%96\/"
+        },"genre": "posts","keywords": "web","wordcount":  1254 ,
+        "url": "https:\/\/ally1212.github.io\/posts\/servlet%E4%BC%98%E5%8C%96\/","datePublished": "2023-02-02T09:35:16+08:00","dateModified": "2023-02-02T09:35:16+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "ziheng"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的解放日志"><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/friend/"> 友链 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的解放日志"><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/friend/" title="">友链</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Servlet优化</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>ziheng</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-02-02">2023-02-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1254 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#11-归纳实体servlet">1.1 归纳实体Servlet</a></li>
+        <li><a href="#72-dispatcherservlet引入">7.2 dispatcherServlet引入</a></li>
+        <li><a href="#73-controller优化">7.3 controller优化</a></li>
+        <li><a href="#74-总结">7.4 总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="11-归纳实体servlet">1.1 归纳实体Servlet</h3>
+<p>servlet比较多&ndash;&gt;FruitServlet处理</p>
+<p>把各个servlet中的do get/do post方法剪贴到FruitServlet中的，在其中根据前端请求operate的参数，找到对应的方法</p>
+<h3 id="72-dispatcherservlet引入">7.2 dispatcherServlet引入</h3>
+<p>上一个优化缺点：如果方法多了，switch case太多。</p>
+<p>优化：反射获取当前类中所有的方法，再进一步引入dispatcherServlet</p>
+<p>dispatcherServlet：</p>
+<ul>
+<li>拦截所有请求，设置统一编码</li>
+<li>重写带参数httpServlet的方法</li>
+<li>获取请求里面的servletPath</li>
+</ul>
+<p>然后字符串截取得到hello</p>
+<ul>
+<li>让hello和helloController对应&ndash;&gt;在配置文件中对其进行说明</li>
+<li>写applicationContext.xml（可扩展的标志语言）</li>
+</ul>
+<p>在dispatcherServlet中解析配置文件，获取所有的bean并保存到map集合中</p>
+<p>在dispatcherServlet中根据截取得到的hello&ndash;&gt;在map集合中找到对应的controller，调用其方法</p>
+<p>暂时问题：之前FruitController有注解所以是一个servlet，会调用父类的init（）方法，现在注解去掉了，所以init（）方法没有被执行。</p>
+<h3 id="73-controller优化">7.3 controller优化</h3>
+<p>FruitController和UserController等一个个形成了一个个组件，放在容器中</p>
+<p>在dispatcherServlet中根据截取得到的hello&ndash;&gt;在map集合中找到对应的controller，反射得到其参数数组，在前端request中获取参数数组，然后调用方法。</p>
+<p>各个Controller里面都要获取参数，都有重定向/资源转发，可抽取</p>
+<p>在FruitController中各个方法的参数被dispatcherServlet获取</p>
+<h3 id="74-总结">7.4 总结</h3>
+<p>优化总结：</p>
+<ul>
+<li>最初，一个请求对应一个servlet，这样的问题是servlet太多了</li>
+<li>把一些请求合并为一个请求，对应一个Servlet。IndexServlet/AddServlet/EditServet-&gt;合并成通过一个operate的值来决定调用FruitServlet中的哪一个方法，使用的是switch-case</li>
+<li>上一个版本中，Servlet中充斥着大量的switch-case，试想一下随着业务规模变大，会有很多的servlet，因此，我们在servlet中使用了反射技术，我们规定operate的值和方法名一致，那么我们收到的operate是什么值，我们就调用哪一个方法</li>
+<li>上一个版本中使用了反射技术，但还存在部分问题：每一个servlet中都有类似的反射技术的代码，因此继续抽取，DispatcherServlet这个类的工作分为两大部分:从url中提取servletPath：/fruit.do -&gt; fruit，根据fruit找到对应的controller，将获取到的operate的值定位到需要调用的方法</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-02-02</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/web/">web</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" class="prev" rel="prev" title="关于博客"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>关于博客</a>
+            <a href="/posts/typora%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/" class="next" rel="next" title="Typora使用文档">Typora使用文档<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">ziheng</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"data":{"id-1":"夜航西飞","id-2":"夜航西飞"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

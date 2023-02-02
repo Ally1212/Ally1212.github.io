@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>博客相关 - 标签 - 我的解放日志</title>
+        <link>https://ally1212.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/</link>
+        <description>博客相关 - 标签 - 我的解放日志</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Feb 2023 09:27:00 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/" rel="self" type="application/rss+xml" /><item>
+    <title>关于博客</title>
+    <link>https://ally1212.github.io/posts/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</link>
+    <pubDate>Thu, 02 Feb 2023 09:27:00 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</guid>
+    <description><![CDATA[起因 过年这后几天，看到到一篇博客，里面记录了这个博客的历史，最后一条记录是迁移到了hugo，顺便介绍了hugo的一些优点。被这些优点深深吸引]]></description>
+</item>
+</channel>
+</rss>

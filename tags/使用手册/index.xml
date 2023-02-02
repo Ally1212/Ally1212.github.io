@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>使用手册 - 标签 - 我的解放日志</title>
+        <link>https://ally1212.github.io/tags/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+        <description>使用手册 - 标签 - 我的解放日志</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" rel="self" type="application/rss+xml" /><item>
+    <title>Typora使用文档</title>
+    <link>https://ally1212.github.io/posts/typora%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</link>
+    <pubDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/typora%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/</guid>
+    <description><![CDATA[第零步 注意事项 中文标点符号不被Markdown所认可, 而且无法被转义. 所以应该使用英文标点. 并且在使用后加一个空格使其更美观. 第一步 基础语法]]></description>
+</item>
+</channel>
+</rss>

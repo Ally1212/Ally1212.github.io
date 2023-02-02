@@ -3,12 +3,52 @@
         <title>Tags - 标签 - 我的解放日志</title>
         <link>https://ally1212.github.io/tags/</link>
         <description>Tags - 标签 - 我的解放日志</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>SSM</title>
+    <link>https://ally1212.github.io/tags/ssm/</link>
+    <pubDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/tags/ssm/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>使用手册</title>
+    <link>https://ally1212.github.io/tags/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+    <pubDate>Thu, 02 Feb 2023 15:38:52 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/tags/%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>web</title>
+    <link>https://ally1212.github.io/tags/web/</link>
+    <pubDate>Thu, 02 Feb 2023 09:35:16 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/tags/web/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>博客相关</title>
+    <link>https://ally1212.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/</link>
+    <pubDate>Thu, 02 Feb 2023 09:27:00 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>操作系统</title>
     <link>https://ally1212.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
     <pubDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</pubDate>
     <author>ziheng</author>
     <guid>https://ally1212.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>网络</title>
+    <link>https://ally1212.github.io/tags/%E7%BD%91%E7%BB%9C/</link>
+    <pubDate>Sun, 29 Jan 2023 22:34:26 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/tags/%E7%BD%91%E7%BB%9C/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
