@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>日记 - 分类 - 我的解放日志</title>
+        <link>https://ally1212.github.io/categories/%E6%97%A5%E8%AE%B0/</link>
+        <description>日记 - 分类 - 我的解放日志</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 19 Feb 2023 18:14:47 &#43;0800</lastBuildDate><atom:link href="https://ally1212.github.io/categories/%E6%97%A5%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>日记</title>
+    <link>https://ally1212.github.io/posts/%E6%97%A5%E8%AE%B0/</link>
+    <pubDate>Sun, 19 Feb 2023 18:14:47 &#43;0800</pubDate>
+    <author>ziheng</author>
+    <guid>https://ally1212.github.io/posts/%E6%97%A5%E8%AE%B0/</guid>
+    <description><![CDATA[年后第一次写博客，从一遍日记开始吧 回顾 最近发生了很多事，返校考试，临近秋招&hellip; 最近也越发觉得时间太珍贵了，现在是2月19号，其实]]></description>
+</item>
+</channel>
+</rss>
